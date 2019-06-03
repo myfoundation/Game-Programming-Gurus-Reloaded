@@ -14,11 +14,10 @@ The book:
 <br>
 English & Russian Edition
 <br>
+<a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
+<br>
 <br>
 <a href="https://www.amazon.com/Tricks-Game-Programming-Gurus-Andre-Lamothe/dp/0672305070">Book store</a>
-<br>
-<br>
-<a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
 <br>
 <br>
 «Tricks of the Game-Programming Gurus»
