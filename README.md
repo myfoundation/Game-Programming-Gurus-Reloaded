@@ -14,6 +14,7 @@ The book:
 <br>
 English & Russian Edition
 <br>
+<br>
 <a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
 <br>
 <br>
