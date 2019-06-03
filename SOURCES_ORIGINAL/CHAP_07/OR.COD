@@ -1,0 +1,53 @@
+; File or.c
+; 
+; #include <stdio.h>
+; 
+; 
+; char far *source, *dest;  // the source and destination data regions
+; 
+; main()
+; {
+; Line 8
+					_main:
+	*** 000000	c8 00 00 00 		enter	OFFSET L00180,OFFSET 0
+	*** 000004	56 			push	si
+	*** 000005	57 			push	di
+; index = fffc
+; data = fffa
+; 
+; int index;
+; Line 10
+; unsigned data;
+; Line 11
+; 
+; // logical operator version (OR)
+; 
+; dest[index]=dest[index]=data | source[index];
+; Line 15
+	*** 000006	8b 46 fc 		mov	ax,WORD PTR -4[bp]
+	*** 000009	8b 1e 00 00 		mov	bx,WORD PTR _source
+	*** 00000d	8b 0e 02 00 		mov	cx,WORD PTR _source+2
+	*** 000011	03 d8 			add	bx,ax
+	*** 000013	8e c1 			mov	es,cx
+	*** 000015	26 8a 07 		mov	al,BYTE PTR es:[bx]
+	*** 000018	98 			cbw
+	*** 000019	0b 46 fa 		or	ax,WORD PTR -6[bp]
+	*** 00001c	8b 4e fc 		mov	cx,WORD PTR -4[bp]
+	*** 00001f	8b 1e 00 00 		mov	bx,WORD PTR _dest
+	*** 000023	03 d9 			add	bx,cx
+	*** 000025	88 07 			mov	BYTE PTR [bx],al
+	*** 000027	8b 4e fc 		mov	cx,WORD PTR -4[bp]
+	*** 00002a	8b 1e 00 00 		mov	bx,WORD PTR _dest
+	*** 00002e	03 d9 			add	bx,cx
+	*** 000030	88 07 			mov	BYTE PTR [bx],al
+; 
+; } // end main
+; Line 17
+; Line 17
+					L00177:
+	*** 000032	5f 			pop	di
+	*** 000033	5e 			pop	si
+	*** 000034	c9 			leave
+	*** 000035	cb 			ret	OFFSET 0
+Local Size: 6
+; Line 0
