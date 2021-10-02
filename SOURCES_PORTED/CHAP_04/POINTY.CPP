@@ -15,7 +15,7 @@ void main2(void)
 
 int x,y,index,color;
 
-// put the computer into graphics mode 
+// put the computer into graphics mode
 
 _setvideomode(_VRES16COLOR); //  640x480 in 16 colors
 
@@ -26,11 +26,11 @@ for (index = 0; index<10000; index++)
      // get a random position and color and plot a point there
 
      x = rand()%640;
-     y = rand()%480; 
+     y = rand()%480;
      color = rand()%16;
     _setcolor(color);  // set the color of the pixel to be drawn
     _setpixel(x,y);    // draw the pixel
- 
+
      } // end for index
 
 // wait for the user to hit a key
@@ -44,4 +44,3 @@ _setvideomode(_DEFAULTMODE);
 } // end main
 
 
-

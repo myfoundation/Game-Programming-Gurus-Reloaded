@@ -71,6 +71,8 @@ _asm
 void Plot_Pixel_Fast_D(int x,int y,unsigned char color)
 {
 
+if((SCREEN_WIDTH*y + x) >= SCREEN_WIDTH*SCREEN_HEIGHT) return; // CHECK BOUNDARIES
+
 // plots pixels into the double buffer
 
 // use the fact that 320*y = 256*y + 64*y = y<<8 + y<<6
@@ -157,4 +159,3 @@ _setvideomode(_DEFAULTMODE);
 
 } // end main
 
-

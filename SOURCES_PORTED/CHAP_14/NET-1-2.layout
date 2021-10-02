@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Win32 Debug" />
+	<File name="GRAPH1.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15969" topLine="589" />
+		</Cursor>
+	</File>
+	<File name="NET-1-2.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="841" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="SNDLIB.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1018" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="GRAPH1.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4692" topLine="93" />
+		</Cursor>
+	</File>
+	<File name="SERLIB.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5225" topLine="191" />
+		</Cursor>
+	</File>
+	<File name="KEYLIB.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2346" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="SERLIB.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3000" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="KEYLIB.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3687" topLine="66" />
+		</Cursor>
+	</File>
+	<File name="..\DOSEmu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="74" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="SNDLIB.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3151" topLine="139" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

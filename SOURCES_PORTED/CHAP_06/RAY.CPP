@@ -64,8 +64,8 @@
 
 // unsigned int far *clock = (unsigned int far *)0x0000046C; // pointer to internal
                                                           // 18.2 clicks/sec
-// USAGE: ULONG now = (*clock)();
-ULONG (*clock)() = PMEM_0x0000046C;
+// USAGE: ULONG now = (*_clock)();
+ULONG (*_clock)() = PMEM_0x0000046C;
 
 
 // world map of nxn cells, each cell is 64x64 pixels
@@ -102,7 +102,7 @@ return;
 */
 //------------------------------------------
 
-	
+
 // this function uses the internal time keeper timer i.e. the one that goes
 // at 18.2 clicks/sec to to a time delay.  You can find a 32 bit value of
 // this timer at 0000:046Ch
@@ -111,12 +111,12 @@ unsigned int now;
 
 // get current time
 
-now = (*clock)();
+now = (*_clock)();
 
 // wait till time has gone past current time plus the amount we eanted to
 // wait.  Note each click is approx. 55 milliseconds.
 
-while(abs((*clock)() - now) < clicks){ Sleep(5); }
+while(abs(int((*_clock)() - now) < clicks)){ Sleep(5); }
 
 } // end Timer
 
@@ -995,4 +995,3 @@ _setvideomode(_DEFAULTMODE);
 } // end main
 
 
-

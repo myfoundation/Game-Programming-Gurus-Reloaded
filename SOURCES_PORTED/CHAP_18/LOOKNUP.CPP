@@ -45,7 +45,7 @@ for (index=0; index<1000; index++)
      xo = rand()%320;
      yo = rand()%200;
      color = rand()%256;
-     
+
      for (ang=0; ang<360; ang++)
           {
           x = xo + cos(ang*3.14159/180) * radius;
@@ -77,7 +77,7 @@ for (index=0; index<1000; index++)
      xo = rand()%320;
      yo = rand()%200;
      color = rand()%256;
-     
+
      for (ang=0; ang<360; ang++)
           {
           x = xo + cos_table[ang] * radius;
@@ -87,7 +87,7 @@ for (index=0; index<1000; index++)
 		  int offset = (y<<6) + (y<<8) + x;
 		  // ALGORITHM ERROR FIXING. CHECK THE BOUNDS!
 		  if(offset < 0 || offset >= MAX_SCREEN_OFFSET) continue;
-		  
+
           screen[offset] = color;
           } // end for ang
 _redraw_screen();
@@ -102,4 +102,3 @@ _setvideomode(_DEFAULTMODE);
 
 } // end main
 
-

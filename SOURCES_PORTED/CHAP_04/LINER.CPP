@@ -16,7 +16,7 @@ void main2(void)
 
 int x1,y1,x2,y2,color,index;
 
-// put the computer into graphics mode 
+// put the computer into graphics mode
 
 _setvideomode(_VRES16COLOR); //  640x480 in 16 colors
 
@@ -34,7 +34,7 @@ for (index = 0; index<1000; index++)
     _setcolor(color);  // set the color of the pixel to be drawn
     _moveto(x1,y1);    // move to the start of the line
     _lineto(x2,y2);    //  draw the line
-  
+
      } // end for index
 
 // wait for the user to hit a key
@@ -49,4 +49,3 @@ _setvideomode(_DEFAULTMODE);
 
 
 
-

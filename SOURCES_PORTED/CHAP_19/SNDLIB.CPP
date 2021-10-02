@@ -26,7 +26,7 @@ unsigned ct_voice_status;
 unsigned char *current_sound_play = NULL;
 unsigned time_sound_end_play = 0;
 
-struct wav_header{    
+struct wav_header{
 char chunk_id[4];
 int chunk_size;
 char format[4];
@@ -34,7 +34,7 @@ char subchunk1_id[4];
 int subchunk1_size;
 short int audio_format;
 short int num_channels;
-int sample_rate;            
+int sample_rate;
 int byte_rate;
 short int block_align;
 short int bits_per_sample;
@@ -71,7 +71,7 @@ mciSendString("resume MY_SND");
 
 mciSendString("stop MY_SND");
 
-// etc 
+// etc
 */
 
 void Voc_Set_Speaker(unsigned int on)
@@ -127,7 +127,7 @@ ULONG get_wav_time_ms(BYTE* path)
 	*/
 
 	int fl = file_length(path) - sizeof(hd);
-	
+
 	double durationSeconds = fl / (hdr->sample_rate* hdr->num_channels * hdr->bits_per_sample /8);
     return durationSeconds * 1000;
 }
@@ -139,7 +139,7 @@ int Voc_Play_Sound(unsigned char far *addr,unsigned char header_length)
 {
 // plays a pre-loaded VOC file
 
-	time_sound_end_play = _clock() + get_wav_time_ms(addr);
+	time_sound_end_play = c_clock() + get_wav_time_ms(addr);
 
 	PlaySound((char*)addr, 0, SND_ASYNC);
 
@@ -337,4 +337,3 @@ void Voc_Load_Driver(void)
 
 
 
-

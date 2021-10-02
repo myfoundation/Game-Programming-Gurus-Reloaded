@@ -16,4 +16,3 @@ if (data=source[index])
    dest[index]=data;
 
 } // end main
-

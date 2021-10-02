@@ -244,14 +244,14 @@ _outp(port_base + SER_IER, 1);
 if (port_base == COM_1)
    {
    Old_Isr = _dos_getvect(INT_SER_PORT_0);
-   _dos_setvect(INT_SER_PORT_0, Serial_Isr);
+   _dos_setvect(INT_SER_PORT_0, (void*)Serial_Isr);
    printf("\nOpening Communications Channel Com Port #1...\n");
 
    }
 else
    {
    Old_Isr = _dos_getvect(INT_SER_PORT_1);
-   _dos_setvect(INT_SER_PORT_1, Serial_Isr);
+   _dos_setvect(INT_SER_PORT_1, (void*)Serial_Isr);
    printf("\nOpening Communications Channel Com Port #2...\n");
    }
 
@@ -286,12 +286,12 @@ _outp(PIC_IMR, old_int_mask );
 
 if (port_base == COM_1)
    {
-   _dos_setvect(INT_SER_PORT_0, Old_Isr);
+   _dos_setvect(INT_SER_PORT_0, (void*)Old_Isr);
    printf("\nClosing Communications Channel Com Port #1.\n");
    }
 else
    {
-   _dos_setvect(INT_SER_PORT_1, Old_Isr);
+   _dos_setvect(INT_SER_PORT_1, (void*)Old_Isr);
    printf("\nClosing Communications Channel Com Port #2.\n");
    }
 
@@ -365,4 +365,4 @@ Close_Serial(COM_1);
 
 } // end main
 
-
+

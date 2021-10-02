@@ -29,6 +29,19 @@ ISBN: 978-0672305078, Sams Publishing, 1994
 <img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_en.png">
 <br>
 <br>
+<b>How to run examples in IDE CodeBlocks</b>
+<br>
+1. Extract IDE from
+<br>
+IDE\codeblocks-20.03-mingw-nosetup.zip
+<br>
+2. Run CbLauncher.exe IDE and open file:
+<br>
+SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
+<br>
+3. Activate desired project, compile and run.
+<br>
+<br>
 /
 <br>
 <br>

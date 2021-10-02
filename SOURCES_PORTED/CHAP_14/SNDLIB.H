@@ -42,4 +42,3 @@ char far *Voc_Load_Sound(char *filename, unsigned char *header_length);
 
 void Voc_Unload_Sound(char far *sound_ptr);
 
-

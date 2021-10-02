@@ -77,10 +77,9 @@ int Ready_Serial();
 
 int Serial_Read();
 
-Serial_Write(char ch);
+void Serial_Write(char ch);
 
-Open_Serial(int port_base, int baud, int configuration);
+void Open_Serial(int port_base, int baud, int configuration);
 
-Close_Serial(int port_base);
+void Close_Serial(int port_base);
 
-

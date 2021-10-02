@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="CHAP_07/AFIELD.cbp" />
+		<Project filename="CHAP_11/ANTS.cbp" />
+		<Project filename="CHAP_11/BALL.cbp" />
+		<Project filename="CHAP_13/BFLY.cbp" />
+		<Project filename="CHAP_07/BIRDANI.cbp" />
+		<Project filename="CHAP_07/CIRCLES.cbp" />
+		<Project filename="CHAP_12/CYBER.cbp" />
+		<Project filename="CHAP_07/DEFEND.cbp" />
+		<Project filename="CHAP_13/DFLY.cbp" />
+		<Project filename="CHAP_04/FIELD.cbp" />
+		<Project filename="CHAP_04/FIELD_DL.cbp" />
+		<Project filename="CHAP_02/FILLC.cbp" />
+		<Project filename="CHAP_08/FINVYREN.cbp" />
+		<Project filename="CHAP_18/FIX.cbp" />
+		<Project filename="CHAP_13/FLY.cbp" />
+		<Project filename="CHAP_11/GAS.cbp" />
+		<Project filename="CHAP_03/KEY.cbp" />
+		<Project filename="CHAP_04/LINER.cbp" />
+		<Project filename="CHAP_18/LOOKNUP.cbp" />
+		<Project filename="CHAP_03/MOUSE.cbp" />
+		<Project filename="CHAP_14/NET-1-2.cbp" />
+		<Project filename="CHAP_14/NLINK.cbp" />
+		<Project filename="CHAP_12/OUTATIME.cbp" />
+		<Project filename="CHAP_05/PALDEMO.cbp" />
+		<Project filename="CHAP_17/PARAL.cbp" />
+		<Project filename="CHAP_17/PARAL-1-2.cbp" />
+		<Project filename="CHAP_04/POINTY.cbp" />
+		<Project filename="CHAP_04/POLYDRAW.cbp" />
+		<Project filename="CHAP_12/PRES.cbp" />
+		<Project filename="CHAP_06/RAY.cbp" />
+		<Project filename="CHAP_07/SCALE.cbp" />
+		<Project filename="CHAP_07/SCREENFX.cbp" />
+		<Project filename="CHAP_02/SETMODEC.cbp" />
+		<Project filename="CHAP_09/SOUND.cbp" />
+		<Project filename="CHAP_12/SPY.cbp" />
+		<Project filename="CHAP_12/STARS.cbp" />
+		<Project filename="CHAP_07/STICK.cbp" />
+		<Project filename="CHAP_13/TERM.cbp" />
+		<Project filename="CHAP_17/TILES.cbp" />
+		<Project filename="CHAP_05/TOMB.cbp" />
+		<Project filename="CHAP_07/VSYNC.cbp" />
+		<Project filename="CHAP_08/VYREN.cbp" />
+		<Project filename="CHAP_19/WARLOCK.cbp" />
+		<Project filename="CHAP_15/WEDIT.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

@@ -62,7 +62,7 @@ Plot_Pixel_Fast(int x,int y,unsigned char color)
 
 // use the fact that 320*y = 256*y + 64*y = y<<8 + y<<6
 
-	if(x < 0 || y < 0 || x >= 320 || y >= 200) return;
+	if(x < 0 || y < 0 || x >= 320 || y >= 200) return 0;
 
 video_buffer[((y<<8) + (y<<6)) + x] = color;
 
@@ -201,7 +201,7 @@ printf("Use numeric pad ARROWS keys.\nPress ESC to Exit.");
 
 Old_Isr = _dos_getvect(KEYBOARD_INT);
 
-_dos_setvect(KEYBOARD_INT, New_Key_Int);
+_dos_setvect(KEYBOARD_INT, (void*)New_Key_Int);
 
 // main event loop
 
@@ -241,10 +241,10 @@ printf("raw key=%d   ",raw_key);
 
 // replace old ISR
 
-_dos_setvect(KEYBOARD_INT, Old_Isr);
+_dos_setvect(KEYBOARD_INT, (void*)Old_Isr);
 
 _setvideomode(_DEFAULTMODE);
 
 } // end main
 
-
+

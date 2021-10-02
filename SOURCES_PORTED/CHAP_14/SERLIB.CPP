@@ -129,7 +129,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////
 
-Serial_Write(char ch)
+void Serial_Write(char ch)
 {
 
 // this function writes a character to the transmit buffer, but first it
@@ -156,7 +156,7 @@ _outp(open_port + SER_THR, ch);
 
 //////////////////////////////////////////////////////////////////////////////
 
-Open_Serial(int port_base, int baud, int configuration)
+void Open_Serial(int port_base, int baud, int configuration)
 {
 
 // this function will open up the serial port, set it's configuration, turn
@@ -193,14 +193,14 @@ _outp(port_base + SER_IER, 1);
 if (port_base == COM_1)
    {
    Old_Isr = _dos_getvect(INT_SER_PORT_0);
-   _dos_setvect(INT_SER_PORT_0, Serial_Isr);
+   _dos_setvect(INT_SER_PORT_0, (void*)Serial_Isr);
    printf("\nOpening Communications Channel Com Port #1...\n");
 
    }
 else
    {
    Old_Isr = _dos_getvect(INT_SER_PORT_1);
-   _dos_setvect(INT_SER_PORT_1, Serial_Isr);
+   _dos_setvect(INT_SER_PORT_1, (void*)Serial_Isr);
    printf("\nOpening Communications Channel Com Port #2...\n");
    }
 
@@ -217,7 +217,7 @@ _outp(PIC_IMR, (port_base==COM_1) ? (old_int_mask & 0xEF) : (old_int_mask & 0xF7
 //////////////////////////////////////////////////////////////////////////////
 
 
-Close_Serial(int port_base)
+void Close_Serial(int port_base)
 {
 
 // this function closes the port which entails turning off interrupts and
@@ -235,12 +235,12 @@ _outp(PIC_IMR, old_int_mask );
 
 if (port_base == COM_1)
    {
-   _dos_setvect(INT_SER_PORT_0, Old_Isr);
+   _dos_setvect(INT_SER_PORT_0, (void*)Old_Isr);
    printf("\nClosing Communications Channel Com Port #1.\n");
    }
 else
    {
-   _dos_setvect(INT_SER_PORT_1, Old_Isr);
+   _dos_setvect(INT_SER_PORT_1, (void*)Old_Isr);
    printf("\nClosing Communications Channel Com Port #2.\n");
    }
 
@@ -248,4 +248,4 @@ else
 
 //////////////////////////////////////////////////////////////////////////////
 
-
+

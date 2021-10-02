@@ -13,7 +13,7 @@
 void main2(void)
 {
 
-// put the computer into graphics mode 
+// put the computer into graphics mode
 _setvideomode(_VRES16COLOR); //  640x480 in 16 colors
 
 // draw a simple polygon
@@ -44,4 +44,3 @@ _setvideomode(_DEFAULTMODE);
 
 } // end main
 
-

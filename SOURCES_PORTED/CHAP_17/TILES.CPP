@@ -122,7 +122,7 @@
 //
     void RestoreKeyboard(void)
     {
-      _dos_setvect(KEYBOARD,OldInt9);   // restore BIOS keyboard interrupt
+      _dos_setvect(KEYBOARD,(void*)OldInt9);   // restore BIOS keyboard interrupt
     }
 
 //
@@ -132,7 +132,7 @@
     void InitKeyboard(void)
     {
       OldInt9=_dos_getvect(KEYBOARD);   // save BIOS keyboard interrupt
-      _dos_setvect(KEYBOARD,NewInt9);   // install new int 9h handler
+      _dos_setvect(KEYBOARD,(void*)NewInt9);   // install new int 9h handler
     }
 
 //

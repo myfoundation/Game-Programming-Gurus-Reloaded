@@ -15,4 +15,3 @@ unsigned data;
 dest[index]=dest[index]=data | source[index];
 
 } // end main
-

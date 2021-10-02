@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Win32 Debug" />
+	<File name="SNDLIB.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3151" topLine="113" />
+		</Cursor>
+	</File>
+	<File name="SNDLIB.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1018" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\DOSEmu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="15917" topLine="481" />
+		</Cursor>
+	</File>
+	<File name="GRAPHICS-W.CPP" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="19502" topLine="727" />
+		</Cursor>
+	</File>
+	<File name="WARLOCK.CPP" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42465" topLine="1650" />
+		</Cursor>
+	</File>
+	<File name="..\DOSEmu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23444" topLine="503" />
+		</Cursor>
+	</File>
+	<File name="GRAPHICS-W.H" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4828" topLine="101" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

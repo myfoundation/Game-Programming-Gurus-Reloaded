@@ -50,7 +50,7 @@ void main2(void)
 
 Old_Isr = _dos_getvect(TIME_KEEPER_INT);
 
-_dos_setvect(TIME_KEEPER_INT, Timer);
+_dos_setvect(TIME_KEEPER_INT, (void*)Timer);
 
 // wait for user to hit a key
 
@@ -67,9 +67,9 @@ while(!kbhit())
 
 // replace old ISR
 
-_dos_setvect(TIME_KEEPER_INT, Old_Isr);
+_dos_setvect(TIME_KEEPER_INT, (void*)Old_Isr);
 
 
 } // end main
 
-
+

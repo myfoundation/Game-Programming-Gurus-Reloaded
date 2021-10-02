@@ -252,4 +252,3 @@ _redraw_screen();
 Set_Mode(TEXT_MODE);
 
 } // end main
-

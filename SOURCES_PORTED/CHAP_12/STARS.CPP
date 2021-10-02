@@ -163,7 +163,7 @@ video_buffer = (unsigned char far *)MEMORY_0xA0000000; // vram byte ptr
 
 Old_Isr = _dos_getvect(TIME_KEEPER_INT);
 
-_dos_setvect(TIME_KEEPER_INT, Star_Int);
+_dos_setvect(TIME_KEEPER_INT, (void*)Star_Int);
 
 // wait for user to hit a key
 
@@ -187,10 +187,9 @@ if (c=='e')
 
 // replace old ISR
 
-_dos_setvect(TIME_KEEPER_INT, Old_Isr);
+_dos_setvect(TIME_KEEPER_INT, (void*)Old_Isr);
 
 _setvideomode(_DEFAULTMODE);
 
 } // end main
 
-

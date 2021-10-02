@@ -214,8 +214,8 @@ void (_interrupt _far *Old_Key_Isr)(); // holds old keyboard interrupt handler
 
 // unsigned int far *clock = (unsigned int far *)0x0000046C; // pointer to internal
                                                           // 18.2 clicks/sec
-// USAGE: ULONG now = (*clock)();
-ULONG (*clock)() = PMEM_0x0000046C;
+// USAGE: ULONG now = (*_clock)();
+ULONG (*_clock)() = PMEM_0x0000046C;
 
 
 // world map of nxn cells, each cell is 64x64 pixels
@@ -690,7 +690,7 @@ return;
 */
 //------------------------------------------
 
-	
+
 // this function uses the internal time keeper timer i.e. the one that goes
 // at 18.2 clicks/sec to to a time delay.  You can find a 32 bit value of
 // this timer at 0000:046Ch
@@ -699,12 +699,12 @@ unsigned int now;
 
 // get current time
 
-now = (*clock)();
+now = (*_clock)();
 
 // wait till time has gone past current time plus the amount we eanted to
 // wait.  Note each click is approx. 55 milliseconds.
 
-while(abs((*clock)() - now) < clicks){ Sleep(5); }
+while(abs(int((*_clock)() - now) < clicks)){ Sleep(5); }
 
 } // end Timer
 
@@ -1604,13 +1604,13 @@ ULONG TimingResolver(ULONG mode)
 		doSomeOperation();
 		clock_t endTime = clock();
 		clock_t clockTicksTaken = endTime - startTime;
-		double timeInSeconds = clockTicksTaken / (double) CLOCKS_PER_SEC;	
+		double timeInSeconds = clockTicksTaken / (double) CLOCKS_PER_SEC;
 	*/
 	static ULONG
 		step_last_time = 0,
 		main_loop_last_time = 0;
 
-	long c = _clock();
+	long c = c_clock();
 
 	ULONG ret = FALSE;
 
@@ -1627,7 +1627,7 @@ ULONG TimingResolver(ULONG mode)
 		{
 			// 1 LOOP IN XXX MILISECONDS
 			int delay_time = 3 - (c - main_loop_last_time);
-			if(delay_time < 0) 
+			if(delay_time < 0)
 			{
 				ret = 0;
 			}
@@ -1717,7 +1717,7 @@ Voc_Set_Speaker(1);
 
 Old_Key_Isr = _dos_getvect(KEYBOARD_INT);
 
-_dos_setvect(KEYBOARD_INT, New_Key_Int);
+_dos_setvect(KEYBOARD_INT, (void*)New_Key_Int);
 
 // load the demo information
 
@@ -2067,7 +2067,7 @@ demo_word=0;
 
               } // end if time to play a sound
 
-		
+
 		// DETECT IF SOUND STOP
 		ct_voice_status = TimingResolver(TIMING_CHECK_SOUND_PLAY);
 		// LOOP SPEED
@@ -2083,7 +2083,7 @@ Melt();
 
 // replace old ISR's
 
-_dos_setvect(KEYBOARD_INT, Old_Key_Isr);
+_dos_setvect(KEYBOARD_INT, (void*)Old_Key_Isr);
 
 // restore original mode
 
@@ -2120,4 +2120,4 @@ Voc_Terminate_Driver();
 } // end main
 
 
-
+

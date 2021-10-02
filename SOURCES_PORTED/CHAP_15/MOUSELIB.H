@@ -25,4 +25,3 @@
 int Squeeze_Mouse(int command, int *x, int *y,int *buttons);
 
 
-
