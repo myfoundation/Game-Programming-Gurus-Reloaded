@@ -1,4 +1,13 @@
 <p align="center">
+<b>Master Mentor (c) 2022</b>
+<br>
+<br>
+<a href="https://steamclub.net">https://steamclub.net</a>
+<br>
+<br>
+<a href="http://clubsteam.ru">http://clubsteam.ru</a>
+<br>
+<br>
 <b>Game Programming-Gurus Reloaded 1994 / 2019</b>
 <br>
 <br>
