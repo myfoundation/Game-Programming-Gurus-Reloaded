@@ -61,6 +61,6 @@ ISBN: 5-88782-037-3, «Питер Пресс», 1995
 <br>
 «Нисофт», 1996, София, България
 <br>
-<img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_bg.jpg">
+<img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_bg.png">
 <br>
 </p>
