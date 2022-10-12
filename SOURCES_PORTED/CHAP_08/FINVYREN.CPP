@@ -389,13 +389,15 @@ int far *row_x;         // pointer to X scale data (note: it is far)
 
 unsigned char pixel;    // the current textel
 
-int x = 0,                  // work variables
-    y = 0,
-    column = 0,
-    work_offset = 0,
-    video_offset = 0,
-    video_start = 0;
+int x,                  // work variables
+    y,
+    column,
+    work_offset,
+    video_offset,
+    video_start;
 
+// ERROR FIX
+work_offset = 0;
 
 // if object is too small, don't even bother rendering
 

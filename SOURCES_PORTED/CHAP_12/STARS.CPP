@@ -46,7 +46,7 @@ star stars[NUM_STARS]; // the star field
 
 // F U N C T I O N S ////////////////////////////////////////////////////////
 
-Plot_Pixel_Fast(int x,int y,unsigned char color)
+void Plot_Pixel_Fast(int x,int y,unsigned char color)
 {
 
 // plots the pixel in the desired color a little quicker using binary shifting

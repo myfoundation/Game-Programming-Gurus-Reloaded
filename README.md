@@ -15,18 +15,7 @@ The book:
 English & Russian Edition
 <br>
 <br>
-<a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
-<br>
-<br>
 <a href="https://www.amazon.com/Tricks-Game-Programming-Gurus-Andre-Lamothe/dp/0672305070">Book store</a>
-<br>
-<br>
-«Tricks of the Game-Programming Gurus»
-<br>
-<br>
-ISBN: 978-0672305078, Sams Publishing, 1994
-<br>
-<img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_en.png">
 <br>
 <br>
 <b>How to run examples in IDE CodeBlocks</b>
@@ -42,6 +31,17 @@ SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
 3. Activate desired project, compile and run.
 <br>
 <br>
+<a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
+<br>
+<br>
+«Tricks of the Game-Programming Gurus»
+<br>
+<br>
+ISBN: 978-0672305078, Sams Publishing, 1994
+<br>
+<img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_en.png">
+<br>
+<br>
 /
 <br>
 <br>
@@ -51,5 +51,16 @@ SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
 ISBN: 5-88782-037-3, «Питер Пресс», 1995
 <br>
 <img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_ru.jpg">
+<br>
+<br>
+/
+<br>
+<br>
+«Компютърни игри - програмиране и дизайн. Част 1»
+<br>
+<br>
+«Нисофт», 1996, София, България
+<br>
+<img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_bg.jpg">
 <br>
 </p>

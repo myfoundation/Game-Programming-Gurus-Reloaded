@@ -10,7 +10,7 @@
 ########   #######   ######             ##        ###  ###  #### ##    ## ########   #######   ###  ###   ######     ##         #######  ##     ##    ##          ##     #######   #######  ######## ##    ## #### ##     ##
 */
 // =======================================================================
-// COPYRIGHT (c) 2019 BALASH D.V., MIT LICENSE
+// COPYRIGHT (c) 2019, 2022 MASTER MENTOR, MIT LICENSE
 
 /*
 You can use it for book
@@ -21,6 +21,7 @@ Sams Publishing 1995
 
 /*
 VERSION 1.0.1    3:17 02.10.2021
+VERSION 1.0.2    14:27 12.10.2022
 
 */
 
@@ -470,6 +471,17 @@ struct WORDREGS {
         unsigned short si;
         unsigned short di;
         unsigned short cflag;
+
+		// FOR WORK WITH 64 BIT COMPILERS
+		#ifdef _SIZE_T_DEFINED
+				size_t _ax;
+				size_t _bx;
+				size_t _cx;
+				size_t _dx;
+				size_t _si;
+				size_t _di;
+				size_t _cflag;
+		#endif
 };
 struct BYTEREGS {
         unsigned char al, ah;
@@ -542,26 +554,20 @@ bool _trace(TCHAR *format, ...);
 */
 // =======================================================================
 
-class CBoolEvent
+struct CBoolEvent
 {
-public:
 	CBoolEvent(BOOL set = FALSE) { m_event = CreateEvent(NULL, TRUE, set, NULL); }
 	virtual ~CBoolEvent() { CloseHandle(m_event); }
 
 	BOOL IsTrue(DWORD timeout = 0) { return WaitForSingleObject( m_event, timeout ) != WAIT_TIMEOUT; }
-	void SetTrue() { SetEvent(m_event); }
-	void SetFalse() { ResetEvent(m_event); }
-
-	operator HANDLE&() { return m_event; }
-	HANDLE stophandle() { return m_event; }
+	void SetBool(BOOL set) { if(set) SetEvent(m_event); else ResetEvent(m_event); }
 
 private:
 	HANDLE m_event;
 };
 
-class CComAutoCriticalSection__
+struct CComAutoCriticalSection__
 {
-public:
 	void Lock() {EnterCriticalSection(&m_sec);}
 	void Unlock() {LeaveCriticalSection(&m_sec);}
 	CComAutoCriticalSection__() {InitializeCriticalSection(&m_sec);}
@@ -569,29 +575,18 @@ public:
 	CRITICAL_SECTION m_sec;
 };
 
-class CLockObject : public CComAutoCriticalSection__
-{
-public:
-	operator CRITICAL_SECTION&() { return m_sec; }
-};
+struct CLockObject : public CComAutoCriticalSection__ {};
 
-
-class CAutoLock
+struct CAutoLock
 {
-public:
-    CAutoLock( CRITICAL_SECTION& cs )
+    CAutoLock( CLockObject& cs )
     {
         m_cs = &cs;
-		m_is_locked = TRUE;
-        EnterCriticalSection(m_cs);
+        m_cs->Lock();
     }
-    virtual ~CAutoLock() { SafeUnlock(); }
+    virtual ~CAutoLock() { m_cs->Unlock(); }
 
-	void SafeUnlock() { if(m_is_locked) {LeaveCriticalSection(m_cs); m_is_locked = FALSE;} }
-
-private:
-    CRITICAL_SECTION* m_cs;
-	BOOL m_is_locked;
+    CLockObject* m_cs;
 };
 
 template<class T>

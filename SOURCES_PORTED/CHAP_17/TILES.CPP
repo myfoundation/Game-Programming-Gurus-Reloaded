@@ -150,6 +150,10 @@
       r.x.ax=0x1012;                  // BIOS func 10h sub 12h
       r.x.bx=0;                       // starting DAC register
       r.x.cx=256;                     // ending DAC register
+
+#ifdef _SIZE_T_DEFINED
+      r.x._dx = (size_t)pal;
+#endif
       int86x(0x10,&r,&r,&s);          // call video BIOS
     }
 

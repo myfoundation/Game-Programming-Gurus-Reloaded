@@ -141,7 +141,10 @@ switch(command)
 
            } break;
 
-      default:break;
+      default:
+
+           return(1);
+      	break;
 
       } // end switch
 

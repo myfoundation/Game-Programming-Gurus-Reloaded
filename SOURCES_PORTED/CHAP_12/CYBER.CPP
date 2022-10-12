@@ -54,7 +54,7 @@ int key_table[4] = {0,0,0,0}; // the arrow key state table
 
 // F U N C T I O N S ////////////////////////////////////////////////////////
 
-Plot_Pixel_Fast(int x,int y,unsigned char color)
+void Plot_Pixel_Fast(int x,int y,unsigned char color)
 {
 
 // plots the pixel in the desired color a little quicker using binary shifting
@@ -62,7 +62,7 @@ Plot_Pixel_Fast(int x,int y,unsigned char color)
 
 // use the fact that 320*y = 256*y + 64*y = y<<8 + y<<6
 
-	if(x < 0 || y < 0 || x >= 320 || y >= 200) return 0;
+	if(x < 0 || y < 0 || x >= 320 || y >= 200) return;
 
 video_buffer[((y<<8) + (y<<6)) + x] = color;
 
@@ -70,7 +70,7 @@ video_buffer[((y<<8) + (y<<6)) + x] = color;
 
 //////////////////////////////////////////////////////////////////////////////
 
-Fun_Back()
+void Fun_Back()
 {
 int index;
 // draws a background that should jog your memory

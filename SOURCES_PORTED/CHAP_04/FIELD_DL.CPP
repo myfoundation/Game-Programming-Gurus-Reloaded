@@ -158,7 +158,7 @@ for (index=0; index<obj->num_vertices; index++)
 
 //////////////////////////////////////////////////////////////////////////////
 
-Rotate_Object_Mat(object_ptr obj)
+void Rotate_Object_Mat(object_ptr obj)
 {
 
 int index;

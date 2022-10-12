@@ -7,7 +7,7 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Win32 Release">
-				<Option output="D:/_vcpp/Game-Programming-Gurus-Reloaded-master/SOURCES_PORTED/Release/MOUSE" prefix_auto="1" extension_auto="1" />
+				<Option output="./MOUSE" prefix_auto="1" extension_auto="1" />
 				<Option object_output="../Release" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -38,7 +38,7 @@
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug">
-				<Option output="D:/_vcpp/Game-Programming-Gurus-Reloaded-master/SOURCES_PORTED/Debug/MOUSE" prefix_auto="1" extension_auto="1" />
+				<Option output="./MOUSE" prefix_auto="1" extension_auto="1" />
 				<Option object_output="../Debug" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -69,6 +69,11 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
+		</Linker>
 		<Unit filename="../DOSEmu.cpp" />
 		<Unit filename="../DOSEmu.h" />
 		<Unit filename="../StdAfx.cpp" />

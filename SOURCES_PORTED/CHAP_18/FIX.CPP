@@ -55,7 +55,7 @@ return(f1+f2);
 
 ///////////////////////////////////////////////////////////////////////////////
 
-Print_Fixed(fixed f1)
+void Print_Fixed(fixed f1)
 {
 
 printf("%ld.%ld",f1 >> 8, 100*(unsigned long)(f1 & 0x00ff)/256);

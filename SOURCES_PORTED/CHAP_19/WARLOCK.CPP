@@ -62,9 +62,9 @@ void Destroy_Door(int x_cell, int y_cell, int command);
 
 // A S S E M B L Y  E X T E R N S ///////////////////////////////////////////
 
-extern far Draw_Ground_32();   // renders the sky and ground
-extern far Render_Buffer_32(); // copies the double buffer to the video buffer
-extern far Render_Sliver_32(); // draws a textured "sliver"
+extern void far Draw_Ground_32();   // renders the sky and ground
+extern void far Render_Buffer_32(); // copies the double buffer to the video buffer
+extern void far Render_Sliver_32(); // draws a textured "sliver"
 
 // T Y P E S ////////////////////////////////////////////////////////////////
 
@@ -574,7 +574,7 @@ while(++ticks<1800)
 ///////////////////////////////////////////////////////////////////////////////
 
 
-Render_Sliver_32()
+void Render_Sliver_32()
 {
 	Render_Sliver(sliver_object, sliver_scale, sliver_column);
 }

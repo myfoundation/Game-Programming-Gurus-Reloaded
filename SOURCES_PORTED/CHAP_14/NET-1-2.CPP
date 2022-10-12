@@ -172,7 +172,7 @@ int dir_look_up_y[16] = {-3,-2,-2,-1,0,1,2,2,3,2,2,1,0,-1,-2,-2};
 
 // F U N C T I O N S//////////////////////////////////////////////////////////
 
-Sound_Init()
+void Sound_Init()
 {
 
 // this funntion initializes the sound card and loads the sound.  if you have
@@ -212,7 +212,7 @@ Voc_Set_Speaker(1);
 
 //////////////////////////////////////////////////////////////////////////////
 
-Extract_Back_Cells(pcx_picture_ptr image)
+void Extract_Back_Cells(pcx_picture_ptr image)
 {
 
 // extract the cells for the background imagery of the circuits from the loaded
@@ -243,7 +243,7 @@ PCX_Grap_Bitmap(image,(sprite_ptr)&back_cells,17,17,2);
 
 #ifdef NET1
 
-Build_Players(pcx_picture_ptr image, sprite_ptr local, sprite_ptr remote)
+void Build_Players(pcx_picture_ptr image, sprite_ptr local, sprite_ptr remote)
 {
 
 // this function builds the bitmaps of the players and initializes them
@@ -274,7 +274,7 @@ for (index=0; index<16; index++)
 //////////////////////////////////////////////////////////////////////////////
 
 
-Start_Local(sprite_ptr local)
+void Start_Local(sprite_ptr local)
 {
 
 // sets the local player in the top left corner if NET1
@@ -287,7 +287,7 @@ local->y          = 16;
 
 //////////////////////////////////////////////////////////////////////////////
 
-Start_Remote(sprite_ptr remote)
+void Start_Remote(sprite_ptr remote)
 {
 // sets the remote player in the bottom right corner if NET1
 
@@ -305,7 +305,7 @@ remote->y          = 144;
 
 #ifdef NET2
 
-Build_Players(pcx_picture_ptr image, sprite_ptr local, sprite_ptr remote)
+void Build_Players(pcx_picture_ptr image, sprite_ptr local, sprite_ptr remote)
 {
 // this function builds the bitmaps of the players and initializes them
 
@@ -334,7 +334,7 @@ for (index=0; index<16; index++)
 
 //////////////////////////////////////////////////////////////////////////////
 
-Start_Local(sprite_ptr local)
+void Start_Local(sprite_ptr local)
 {
 // sets the locallayer in the bottom right corner if NET1
 
@@ -346,7 +346,7 @@ local->y          = 144;
 
 //////////////////////////////////////////////////////////////////////////////
 
-Start_Remote(sprite_ptr remote)
+void Start_Remote(sprite_ptr remote)
 {
 // sets the remote player in the top left corner if NET1
 
@@ -392,7 +392,7 @@ while(abs(int((*_clock)() - now) < clicks)){ Sleep(5); }
 
 //////////////////////////////////////////////////////////////////////////////
 
-Draw_Game_Grid(char **game_grid)
+void Draw_Game_Grid(char **game_grid)
 {
 
 // this function draws the game grid in the double buffer, by scanning the
@@ -453,7 +453,7 @@ for (index_y = 0; index_y<CELL_ROWS; index_y++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Draw_Gauges(pcx_picture_ptr image)
+void Draw_Gauges(pcx_picture_ptr image)
 {
 // draws the gauges into the video buffer
 
@@ -465,7 +465,7 @@ _fmemcpy((char far *)&video_buffer[ GAUGE_Y * 320],
 
 ////////////////////////////////////////////////////////////////////////////
 
-Draw_Instruments()
+void Draw_Instruments()
 {
 // this function draws the data on the instrument panel
 
@@ -507,7 +507,7 @@ return(ch);
 
 /////////////////////////////////////////////////////////////////////////////
 
-Erase_Missiles()
+void Erase_Missiles()
 {
 
 // this function indexes through all the missiles and if they are active
@@ -533,7 +533,7 @@ for (index=0; index<NUM_MISSILES; index++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Behind_Missiles()
+void Behind_Missiles()
 {
 
 // this function indexes through all the missiles and if they are active
@@ -559,7 +559,7 @@ for (index=0; index<NUM_MISSILES; index++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Draw_Missiles()
+void Draw_Missiles()
 {
 
 // this function indexes through all the missiles and if they are active
@@ -586,7 +586,7 @@ for (index=0; index<NUM_MISSILES; index++)
 /////////////////////////////////////////////////////////////////////////////
 
 
-Blink_Lights()
+void Blink_Lights()
 {
 
 // this function is cool, it does a small color rotatiob on palette registers
@@ -652,7 +652,7 @@ if (!entered_yet)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Fade_Lights()
+void Fade_Lights()
 {
 int index,pal_reg;
 RGB_color color,color_1,color_2,color_3;
@@ -694,7 +694,7 @@ for (index=0; index<30; index++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Move_Missiles()
+void Move_Missiles()
 {
 // this function scans through all the missiles and moves them if they are
 // active, then the function does all the collision detection with the
@@ -790,7 +790,7 @@ for (index=0; index<NUM_MISSILES; index++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Start_Missile(sprite_ptr who, int tag)
+void Start_Missile(sprite_ptr who, int tag)
 {
 
 // this function scans through the missile array and tries to find one that
@@ -833,7 +833,7 @@ for (index=0; index<NUM_MISSILES; index++)
 
 /////////////////////////////////////////////////////////////////////////////
 
-Init_Missiles()
+void Init_Missiles()
 {
 // this function just makes sure all the "state" fields of the missiles are
 // dead so that we don't get any strays on start up.  Remember never assume
@@ -848,7 +848,7 @@ for (index=0; index<NUM_MISSILES; index++)
 
 ////////////////////////////////////////////////////////////////////////////
 
-Link_Up()
+void Link_Up()
 {
 // this function is kinds neat, it tries to see if there is a nother player
 // linked to the serial port.  it work as follows: 1 - is the remote sending
@@ -909,7 +909,7 @@ else
 
 /////////////////////////////////////////////////////////////////////////////
 
-Explosion(int x,int y)
+void Explosion(int x,int y)
 {
 unsigned int now;
 int index;
@@ -1027,7 +1027,7 @@ _redraw_screen();
 
 /////////////////////////////////////////////////////////////////////////////
 
-Do_Explosion()
+void Do_Explosion()
 {
 // controls an explosion be listening for a "hit" message from the "move" tanks
 // function

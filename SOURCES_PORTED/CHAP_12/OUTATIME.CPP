@@ -30,7 +30,7 @@
 
 // F U N C T I O N S //////////////////////////////////////////////////////////
 
-Change_Time(unsigned int new_count)
+void Change_Time(unsigned int new_count)
 {
 
 // send the control word, mode 2, binary, least/most

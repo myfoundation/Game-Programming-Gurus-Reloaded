@@ -1,3 +1,5 @@
+// COPYRIGHT (c) 2019, 2022 MASTER MENTOR, MIT LICENSE
+
 // DOSEmu.cpp : Defines the entry point for the console application.
 //
 
@@ -1395,7 +1397,13 @@ int int86x(int interrupt_id, union REGS *r, union REGS *r_out, struct SREGS * s)
 				break;
 			case VIDEOBIOS_FUNC_SETPALETTE__:
 				{
-					BYTE* raw_palette = (BYTE*)MK_FP(s->es, r->w.dx);
+#ifdef _SIZE_T_DEFINED
+					BYTE* raw_palette = (BYTE*)r->x._dx;
+#else
+					// THIS IS NOT WORKING UNDER 64 BIT COMPILERS
+					BYTE* raw_palette = (BYTE*)MK_FP(s->es, r->x.dx);
+#endif
+
 					_setpalette(raw_palette);
 				}
 				break;
@@ -1650,7 +1658,7 @@ int main(void)
 	// STOP THREADS
 	//------------------------------------------
 	// SIGNAL FOR THREADS STOP
-	emuKernel.m_stop_event.SetTrue();
+	emuKernel.m_stop_event.SetBool(TRUE);
 	// WAIT THREADS STOP AND KILL NOT STOPPED THREADS
 	emuKernel.StopServer(1000);
 	//------------------------------------------

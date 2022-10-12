@@ -318,7 +318,7 @@ while(abs(int((*_clock)() - now) < clicks)){ Sleep(5); }
 
 //////////////////////////////////////////////////////////////////////////////
 
-Release_Mouse()
+void Release_Mouse()
 {
 // waits for user to release mouse
 
@@ -379,7 +379,7 @@ return(-1); // no hit
 
 //////////////////////////////////////////////////////////////////////////////
 
-Load_Textures()
+void Load_Textures()
 {
 
 // this function load all the textures for the preview box
@@ -610,7 +610,7 @@ PCX_Delete((pcx_picture_ptr)&textures);
 
 //////////////////////////////////////////////////////////////////////////////
 
-Clear_Preview()
+void Clear_Preview()
 {
 
 // this function clears the preview window
@@ -631,7 +631,7 @@ for (y=0; y<PREVIEW_HEIGHT; y++)
 
 //////////////////////////////////////////////////////////////////////////////
 
-Clear_Zoom()
+void Clear_Zoom()
 {
 
 // this function clears the zoom window
@@ -649,7 +649,7 @@ for (y=0; y<ZOOM_HEIGHT; y++)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-Scale_Sprite(sprite_ptr sprite,float scale)
+void Scale_Sprite(sprite_ptr sprite,float scale)
 {
 
 // this function scale a sprite by computing the number of source pixels
@@ -712,7 +712,7 @@ for (y=0; y<(int)(scale); y++)
 
 //////////////////////////////////////////////////////////////////////////////
 
-Save_File()
+void Save_File()
 {
 // this function saves the current map to a file
 
@@ -806,11 +806,13 @@ for (y=0; y<MAP_HEIGHT; y++)
     } // end for y
 
 
+   return(1);
+
 } // end Load_File
 
 //////////////////////////////////////////////////////////////////////////////
 
-Clear()
+void Clear()
 {
 // this functions clears the screen, data structures etc.
 
@@ -911,7 +913,7 @@ FAST_CPU_WAIT(10);
 
 //////////////////////////////////////////////////////////////////////////////
 
-Plot_Zoom_Pixel(int x,int y, int color)
+void Plot_Zoom_Pixel(int x,int y, int color)
 {
 // this function draws a zoom pixel in the zoom box. Each zoom pixel is
 // 3x3 with a single pixel boundary around it
@@ -955,7 +957,7 @@ if (x==6 && y==6)
 
 //////////////////////////////////////////////////////////////////////////////
 
-Draw_Zoom_Box(int curr_x, int curr_y)
+void Draw_Zoom_Box(int curr_x, int curr_y)
 {
 // this function draws the zoom box and highlights the cursor position
 

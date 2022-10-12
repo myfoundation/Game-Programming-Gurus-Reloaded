@@ -180,7 +180,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////
 
-Serial_Write(char ch)
+void Serial_Write(char ch)
 {
 
 // this function writes a character to the transmit buffer, but first it
@@ -207,7 +207,7 @@ _outp(open_port + SER_THR, ch);
 
 //////////////////////////////////////////////////////////////////////////////
 
-Open_Serial(int port_base, int baud, int configuration)
+void Open_Serial(int port_base, int baud, int configuration)
 {
 
 // this function will open up the serial port, set it's configuration, turn
@@ -268,7 +268,7 @@ _outp(PIC_IMR, (port_base==COM_1) ? (old_int_mask & 0xEF) : (old_int_mask & 0xF7
 //////////////////////////////////////////////////////////////////////////////
 
 
-Close_Serial(int port_base)
+void Close_Serial(int port_base)
 {
 
 // this function closes the port which entails turning off interrupts and
