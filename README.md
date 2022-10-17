@@ -43,6 +43,9 @@ SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
 <a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/TRICKS%20OF%20THE%20GAME-PROGRAMMING%20GURU%20RELOADED%20(2019).doc?raw=true">Download Instruction</a>
 <br>
 <br>
+<a href="https://habr.com/ru/post/693660/">Read about this port in Russian https://habr.com/ru/post/693660/</a>
+<br>
+<br>
 «Tricks of the Game-Programming Gurus»
 <br>
 <br>
