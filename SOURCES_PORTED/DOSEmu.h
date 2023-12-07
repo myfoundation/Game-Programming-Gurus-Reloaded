@@ -22,7 +22,7 @@ Sams Publishing 1995
 /*
 VERSION 1.0.1    3:17 02.10.2021
 VERSION 1.0.2    14:27 12.10.2022
-
+VERSION 1.0.3    13:50 07.12.2023
 */
 
 // =======================================================================
@@ -57,6 +57,8 @@ main()	-> main2()
 6. PUT IN main2() AFTER _setvideomode() OR Set_Mode()
 
 video_buffer = (unsigned char far *)MEMORY_0xA0000000; // vram byte ptr
+
+USE GLOBAL VARIABLES MAIN_ARGC MAIN_ARGV INSTEAD argc argv IF YOU NEED
 
 7. ENJOY!
 
@@ -269,6 +271,10 @@ void _settextposition(int x, int y);
 ##     ## ##     ## ##     ## ########   ###  ###  ##     ## ##     ## ########    ##          ########  ####  #######   ######     ##          ########  ######     ##    ###
 */
 // =======================================================================
+
+// GLOBAL VARIABLES FOM int main(int argc, char* argv[])
+extern int MAIN_ARGC;
+extern char** MAIN_ARGV;
 
 // DEFAULT 256 VGA PALETE
 extern BYTE VGA_PALETTE[];

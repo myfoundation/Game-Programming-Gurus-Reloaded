@@ -129,6 +129,9 @@ int videomodeCXCY(BOOL is_CX, short mode)
 //------------------------------------------
 // HARDWARE AND BIOS ALLOCATED STRUCTURES
 //------------------------------------------
+int MAIN_ARGC = 0;
+char** MAIN_ARGV = NULL;
+
 BYTE* MEMORY_0xA0000000 = NULL;
 BYTE* MEMORY_0xF000FA6EL = NULL;
 
@@ -1603,8 +1606,11 @@ void main22(void)
 
 // =======================================================================
 
-int main(void)
+int main(int argc, char* argv[])
 {
+	MAIN_ARGC = argc;
+	MAIN_ARGV = argv;
+
 	// FO PREDEFINED TABLES AND SET GLOBALS
 	WINKEY_DOSKEY = create_map_winkey_doskey();
 	MEMORY_0xF000FA6EL = VGA_FONT_8X8;
