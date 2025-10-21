@@ -46,7 +46,15 @@ SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
 <a href="https://habr.com/ru/post/693660/">Read about this port in Russian https://habr.com/ru/post/693660/</a>
 <br>
 <br>
-«Tricks of the Game-Programming Gurus»
+<b>How repeat the code in DOS mode with assembler inserts</b>
+<br>
+<br>
+In this source port for Windows you can compile examples of programs from each chapter of the book using the LLVM or GCC compiler in IDE Code::Blocks, Visual Studio or VS Code.
+<br>
+If you want to repeat the code in DOS mode with assembler inserts, follow <a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/Guide%20How%20repeat%20the%20code%20in%20DOS%20mode%20with%20assembler%20inserts.md">this guide</a>.
+<br>
+<br>
+<b>«Tricks of the Game-Programming Gurus»</b>
 <br>
 <br>
 ISBN: 978-0672305078, Sams Publishing, 1994
