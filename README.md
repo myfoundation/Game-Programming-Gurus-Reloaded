@@ -8,7 +8,7 @@
 <a href="http://clubsteam.ru">http://clubsteam.ru</a>
 <br>
 <br>
-<b>Game Programming-Gurus Reloaded 1994 / 2019</b>
+<b>I. Game Programming-Gurus Reloaded 1994 / 2019</b>
 <br>
 <br>
 Sources code port for Windows
@@ -27,7 +27,7 @@ English & Russian Edition
 <a href="https://www.amazon.com/Tricks-Game-Programming-Gurus-Andre-Lamothe/dp/0672305070">Book store</a>
 <br>
 <br>
-<b>How to run examples in IDE CodeBlocks</b>
+<b>II. How to run examples in IDE CodeBlocks</b>
 <br>
 1. Extract IDE from
 <br>
@@ -46,7 +46,7 @@ SOURCES_PORTED\IDE-CodeBlocks-MinGW-Chapters_02_19.workspace
 <a href="https://habr.com/ru/post/693660/">Read about this port in Russian https://habr.com/ru/post/693660/</a>
 <br>
 <br>
-<b>How repeat the code in DOS mode with assembler inserts</b>
+<b>III. How repeat the code in DOS mode with assembler inserts</b>
 <br>
 <br>
 In this source port for Windows you can compile examples of programs from each chapter of the book using the LLVM or GCC compiler in IDE Code::Blocks, Visual Studio or VS Code.
@@ -54,7 +54,13 @@ In this source port for Windows you can compile examples of programs from each c
 If you want to repeat the code in DOS mode with assembler inserts, follow <a href="https://github.com/myfoundation/Game-Programming-Gurus-Reloaded/blob/master/Guide%20How%20repeat%20the%20code%20in%20DOS%20mode%20with%20assembler%20inserts.md">this guide</a>.
 <br>
 <br>
-<b>«Tricks of the Game-Programming Gurus»</b>
+<b>IV. DOSEmu - Simple C++ engine for fast compile and run DOS apllications under Windows</b>
+<br>
+<br>
+Source code <a href="https://github.com/myfoundation/DOSEmu">https://github.com/myfoundation/DOSEmu</a>.
+<br>
+<br>
+<b>V. International languages book «Tricks of the Game-Programming Gurus»</b>
 <br>
 <br>
 ISBN: 978-0672305078, Sams Publishing, 1994
@@ -84,3 +90,4 @@ ISBN: 5-88782-037-3, «Питер Пресс», 1995
 <img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_bg.png">
 <br>
 </p>
+
