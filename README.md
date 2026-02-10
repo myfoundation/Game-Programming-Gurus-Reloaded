@@ -5,9 +5,6 @@
 <a href="https://steamclub.net">https://steamclub.net</a>
 <br>
 <br>
-<a href="http://clubsteam.ru">http://clubsteam.ru</a>
-<br>
-<br>
 <b>I. Game Programming-Gurus Reloaded 1994 / 2019</b>
 <br>
 <br>
@@ -90,4 +87,5 @@ ISBN: 5-88782-037-3, «Питер Пресс», 1995
 <img src="https://raw.githubusercontent.com/myfoundation/Game-Programming-Gurus-Reloaded/master/jacket_bg.png">
 <br>
 </p>
+
 
